@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+--Brightorange: hsl(31, 77%, 52%);
+--Darkcyan: hsl(184, 100%, 22%);
+--Verydarkcyan: hsl(179, 100%, 13%);
+--Transparentwhite: hsla(0, 0%, 100%, 0.75);
+--Verylightgray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ff-bigShoulders {
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.ff-Lexend {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.main {
+    background-color: var(--Verylightgray);
+    padding: 1rem;
+    /* max-width: 1024px;
+    min-height: 100vh; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    
+    
+}
+
+.card:nth-child(1) {
+    background-color: var(--Brightorange);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.card:nth-child(2) {
+    background-color: var(--Darkcyan);
+}
+.card:nth-child(3) {
+    background-color: var(--Verydarkcyan);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.card__title {
+    text-transform:uppercase;
+    color: var(--Verylightgray);
+    font-weight: 700;
+}
+
+.card__paragraph {
+    color: var(--Transparentwhite);
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+
+.btn {
+    align-self: flex-start;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.card:nth-child(1) .btn {
+    color: var(--Brightorange);
+}
+.card:nth-child(2) .btn {
+    color: var(--Darkcyan);
+}
+.card:nth-child(3) .btn {
+    color: var(--Verydarkcyan);
+    
+}
+
+@media (min-width: 800px) {
+    .main {
+        background-color: var(--Verylightgray);
+        padding: 1rem;
+        /* max-width: 100%;
+        min-height: 100vh; */
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        
+    }
+
+    .card:nth-child(1) {
+        background-color: var(--Brightorange);
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5rem;
+    }
+   
+    .card:nth-child(3) {
+        background-color: var(--Verydarkcyan);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+    
+}
